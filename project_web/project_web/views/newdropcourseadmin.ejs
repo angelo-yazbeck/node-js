@@ -1,0 +1,88 @@
+<!-- Courses Table -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/dropcoursesadmin.css">
+    <title>List of Movies</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .box {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        #box1 {
+            background-color: #f0f0f0;
+        }
+
+        #box2 {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/admin">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box" id="box1">
+            <h2>Courses</h2>
+            <table id="coursesTable">
+                <% courses.forEach(course => { %>
+                <tr>
+                    <td>
+                        <a href="#" class="courseLink">
+                            <%= course.name %>
+                        </a>
+                    </td>
+                </tr>
+                <% }); %>
+            </table>
+           
+        </div>
+        <div class="box" id="box2">
+            <h2>Students taking this course</h2>
+            <!-- Students Table -->
+            <table id="studentsTable">
+                <!-- Students will appear here after course selection -->
+            </table>
+        </div>
+    </div>
+
+
+    <script src="../scripts/coursedrop.js"></script>
+</body>
+</html>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../scripts/newdropcourseadmin.js"></script>
+<script>
+  
+    
+</script>
